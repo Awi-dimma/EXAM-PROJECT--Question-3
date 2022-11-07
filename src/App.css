@@ -9,11 +9,12 @@ main {
   justify-content:center;
   flex-direction:column;
   align-items:center;
-  height:100vh;
+  height:120vh;
+  width:200vh;
   color:white;
   font-size:30px;
   font-family: 'Open Sans', sans-serif;
-  border-radius:20px;
+  border-radius:none;
   background-color: teal;
 
 }
