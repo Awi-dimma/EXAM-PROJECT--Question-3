@@ -24,9 +24,9 @@ function Home() {
             <Link className='text-link' to="/about">About</Link> {" "}
           </button>
         </nav>
-        <Outlet /> <br/>
-        <img src={Mary} style={{width:"200px", height:"200px", BorderRadius:"50%"}}/>
-        <h1>Hello! {user.name}, my name is Mary. I'm a christian and an software engineering Student at Altschool Africa and it's been an Amazing journey. please signup to know more and keep up with my journey.
+        <Outlet /> <br />
+        <img src={Mary} style={{ width: "200px", height: "200px", BorderRadius: "50%" }} />
+        <h1>Hello! {user.name}, my name is Mary. I'm a christian and an software engineering Student at Altschool Africa and it's been an Amazing journey. please Click on the About button to know more, signup and keep up with my journey.
           #maytheforcebewithyou#</h1>
       </div>
     </>
