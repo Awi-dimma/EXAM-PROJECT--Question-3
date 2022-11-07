@@ -7,6 +7,8 @@ import SignInRedirect from './components/RedirectPage'
 import NotFound from './components/NotFound'
 import React from 'react'
 
+import {HelmetProvider} from 'react-helmet-async'
+
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -43,6 +45,7 @@ class ErrorBoundary extends React.Component {
 
 function App() {
   return (
+    <HelmetProvider>
     <main>
       <BrowserRouter>
         <Routes>
@@ -57,6 +60,7 @@ function App() {
         <ErrorBoundary />
       </BrowserRouter>
     </main>
+  </HelmetProvider>   
   )
 }
 

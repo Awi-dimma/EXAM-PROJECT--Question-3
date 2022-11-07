@@ -4,6 +4,9 @@ import FetchedUsers from './FetchedUsers'
 import Pagination from './Pagination'
 import { Link } from 'react-router-dom'
 import './Users.css'
+import { Helmet } from 'react-helmet-async'
+// import {helmet} from 'react-helmet-async'
+
 
 
 function Users() {
@@ -30,6 +33,14 @@ function Users() {
 
 
   return (
+    <>
+      <Helmet>
+          <title>Users</title>
+          <meta 
+            name="description"
+            content="This page shows the link of my users"
+            />
+      </Helmet>
     <div>
       <h1>Fetched user data</h1>
       <FetchedUsers users={currentUsers} loading={loading} />
@@ -38,6 +49,7 @@ function Users() {
         <Link className ='text-link' to="/">Back</Link>
       </button>
     </div>
+    </>  
   )
 }
 export default Users;

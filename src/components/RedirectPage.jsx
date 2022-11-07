@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import Input from "./input";
 import FakeUserAuthContext from "./FakeUserAuthContext"
+import {Helmet} from "react-helmet-async"
 
 const SignInRedirect = () => {
   const nameRef = useRef();
@@ -24,6 +25,14 @@ const SignInRedirect = () => {
   };
 
   return (
+    <>
+      <Helmet>
+          <title>RedirectPage</title>
+          <meta 
+            name="description"
+            content="This page describe's my RedirectPage"
+            />
+        </Helmet>
     <form onSubmit={submitHandler} className="redirect__form">
       <Input
         label="Name"
@@ -41,6 +50,7 @@ const SignInRedirect = () => {
       />
       <Button type="submit">Sign In</Button>
     </form>
+  </>
   );
 };
 export default SignInRedirect;
